@@ -1,0 +1,4 @@
+#N canvas 339 153 488 684 10;
+#X obj 41 249 GPSpoint 50.9763 11.3334 sound1 40;
+#X text 91 180 \$1= Latitude \$2= Longitude \$3= soundfile \$4= Entfernung
+;

@@ -1,0 +1,17 @@
+#N canvas 506 681 450 300 10;
+#X obj 103 59 inlet;
+#X obj 103 105 unpack f f;
+#X obj 103 433 outlet;
+#X obj 103 376 pack f f;
+#X obj 175 163 r loca.gem.pix.height;
+#X obj 118 140 r loca.gem.pix.width;
+#X obj 103 184 /;
+#X obj 160 189 /;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 1;
+#X connect 5 0 6 1;
+#X connect 6 0 3 0;
+#X connect 7 0 3 1;

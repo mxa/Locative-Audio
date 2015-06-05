@@ -1,4 +1,4 @@
-#N canvas 1180 495 907 621 10;
+#N canvas 809 317 424 470 10;
 #X obj 30 25 inlet;
 #X msg 199 48 0;
 #X obj 199 100 text get loca.map;
@@ -18,6 +18,7 @@
 #X obj 280 234 abs;
 #X obj 87 287 +;
 #X obj 226 233 * -1;
+#X obj 293 17 loadbang;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -42,3 +43,4 @@
 #X connect 16 0 12 1;
 #X connect 17 0 6 1;
 #X connect 18 0 13 1;
+#X connect 19 0 1 0;

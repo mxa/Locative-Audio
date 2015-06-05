@@ -1,4 +1,4 @@
-#N canvas 2304 847 592 353 10;
+#N canvas 399 699 592 353 10;
 #X obj 32 21 inlet;
 #X obj 32 295 outlet;
 #X obj 252 46 colorRGB 1 0 0;

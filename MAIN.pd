@@ -1,7 +1,7 @@
-#N canvas 1947 591 777 547 10;
+#N canvas 1000 59 777 547 10;
 #X declare -lib Gem;
 #X obj 384 499 dac~;
-#N canvas 1920 189 327 131 init 0;
+#N canvas 15 198 327 131 init 0;
 #X msg 95 42 6.371e+06;
 #X obj 95 20 loadbang;
 #X obj 24 20 loadbang;
@@ -10,7 +10,6 @@
 #X obj 95 66 v loca.earth-rad;
 #X connect 0 0 5 0;
 #X connect 1 0 0 0;
-#X connect 2 0 3 0;
 #X restore 30 27 pd init;
 #X obj 394 441 catch~;
 #X obj 261 240 tgl 15 0 empty empty empty 17 7 0 10 -233412 -1 -1 0
@@ -19,7 +18,7 @@
 ;
 #X obj 257 318 tgl 15 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
 ;
-#X obj 257 360 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 0
+#X obj 257 360 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 1
 1;
 #X text 291 241 Pssst! Der Feind hört mit!;
 #X text 300 277 Chello;
@@ -30,34 +29,33 @@
 #X obj 621 119 text define loca.map;
 #X msg 621 96 read Yeungnam.world;
 #X obj 31 209 loca.mouse.simulate;
-#X obj 34 406 unpack f f;
-#X floatatom 34 464 10 0 0 0 - - -, f 10;
-#X floatatom 106 462 10 0 0 0 - - -, f 10;
-#X obj 594 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 31 406 unpack f f;
+#X floatatom 31 464 10 0 0 0 - - -, f 10;
+#X floatatom 103 462 10 0 0 0 - - -, f 10;
 #X obj 594 75 t b b;
 #X obj 594 139 s loca.getloc;
 #X obj 31 239 loca.point 35.8382 128.758 sound1 40;
-#X obj 251 206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 251 206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 31 276 loca.point 35.8309 128.762 sound2 50;
 #X obj 31 317 loca.point 35.8387 128.76 sound3 40;
 #X obj 31 360 loca.point 50.9733 128.759 sound4 40;
+#X obj 594 51 r loca.map.read;
 #X connect 2 0 0 0;
 #X connect 2 0 0 1;
 #X connect 14 0 13 0;
-#X connect 15 0 22 0;
+#X connect 15 0 21 0;
 #X connect 16 0 17 0;
 #X connect 16 1 18 0;
 #X connect 19 0 20 0;
-#X connect 20 0 21 0;
-#X connect 20 1 14 0;
-#X connect 22 0 24 0;
-#X connect 22 1 3 0;
-#X connect 23 0 22 3;
+#X connect 19 1 14 0;
+#X connect 21 0 23 0;
+#X connect 21 1 3 0;
+#X connect 22 0 21 3;
+#X connect 23 0 24 0;
+#X connect 23 1 4 0;
 #X connect 24 0 25 0;
-#X connect 24 1 4 0;
-#X connect 25 0 26 0;
-#X connect 25 1 5 0;
-#X connect 26 0 16 0;
-#X connect 26 1 6 0;
+#X connect 24 1 5 0;
+#X connect 25 0 16 0;
+#X connect 25 1 6 0;
+#X connect 26 0 19 0;

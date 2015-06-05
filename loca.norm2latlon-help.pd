@@ -1,0 +1,3 @@
+#N canvas 809 317 687 463 10;
+#X obj 63 178 loca.norm2latlon;
+#X text 198 179 converts 0-1 XY coordinates to latitude longitude;

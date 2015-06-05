@@ -1,0 +1,4 @@
+#N canvas 487 628 650 257 10;
+#X obj 43 113 loca.pix2norm;
+#X text 159 111 converts GEM win pixel coordinates (from gemmouse...)
+to 0-1 normals;

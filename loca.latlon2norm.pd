@@ -1,4 +1,4 @@
-#N canvas 846 238 907 621 10;
+#N canvas 846 241 907 621 10;
 #X obj 102 59 inlet;
 #X msg 360 60 0;
 #X obj 360 112 text get loca.map;
@@ -21,9 +21,11 @@
 #X floatatom 433 300 20 0 0 0 - - -, f 20;
 #X floatatom 326 290 20 0 0 0 - - -, f 20;
 #X floatatom 189 375 20 0 0 0 - - -, f 20;
-#X obj 149 358 abs;
+#X obj 159 352 abs;
 #X obj 360 28 r loca.getloc;
 #X obj 459 29 loadbang;
+#X floatatom 191 417 20 0 0 0 - - -, f 20;
+#X obj 102 353 abs;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -44,7 +46,8 @@
 #X connect 10 0 13 1;
 #X connect 10 0 17 0;
 #X connect 10 1 8 0;
-#X connect 11 0 6 0;
+#X connect 11 0 25 0;
+#X connect 11 0 26 0;
 #X connect 12 0 22 0;
 #X connect 13 0 12 0;
 #X connect 13 0 18 0;
@@ -54,3 +57,4 @@
 #X connect 22 0 6 1;
 #X connect 23 0 1 0;
 #X connect 24 0 1 0;
+#X connect 26 0 6 0;

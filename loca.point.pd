@@ -1,4 +1,4 @@
-#N canvas 1137 134 718 742 10;
+#N canvas 862 1103 718 742 10;
 #X obj 24 690 outlet;
 #X obj 24 21 inlet;
 #X obj 24 51 t l l;
@@ -34,7 +34,8 @@
 #X obj 589 233 t b f;
 #X obj 637 36 inlet;
 #X obj 480 310 loca.latlon2norm;
-#X obj 158 284 loca.haversine \$1 \$2;
+#X obj 158 284 loca.distance \$1 \$2;
+#X floatatom 184 336 15 0 0 0 - - -, f 15;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 2 1 35 0;
@@ -73,3 +74,4 @@
 #X connect 33 0 18 0;
 #X connect 34 0 23 0;
 #X connect 35 0 17 0;
+#X connect 35 0 36 0;

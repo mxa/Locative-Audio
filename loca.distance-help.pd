@@ -1,0 +1,32 @@
+#N canvas 917 216 760 744 10;
+#X text 31 24 Equirectangular approximation formula;
+#X text 79 374 distance in m;
+#X text 34 132 http://rosettacode.org/wiki/Haversine_formula;
+#X text 34 77 In this test-case \, let's calculate the distance between
+Nashville International Airport at 36.12 \, -86.67 and Loas Angeles
+International Airport at 33.94 \, 118.40.;
+#X text 34 168 The result of the test-case should be about 2887.26
+km;
+#X msg 45 275 36.12 -86.67;
+#X obj 67 346 loca.distance 33.94 118.4;
+#X floatatom 66 440 15 0 0 0 - - -, f 15;
+#X obj 66 407 / 1000;
+#X msg 75 305 33.9412 118.403;
+#X text 82 462 distance in km;
+#X text 43 211 This method sucks for long distances \, but works accurately
+for short ones.;
+#X text 136 273 long distance;
+#X text 186 305 short distance;
+#X text 273 503 35.8345 \, 128.758;
+#X text 275 524 35.834 \, 128.758;
+#X text 394 359 distance in m;
+#X floatatom 381 425 15 0 0 0 - - -, f 15;
+#X obj 382 331 loca.distance 35.834 128.758;
+#X msg 382 283 35.8345 128.758;
+#X text 377 450 according to google maps the distance it is 59 m;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;

@@ -1,9 +1,9 @@
-#N canvas 331 1075 559 700 10;
+#N canvas 329 1078 559 700 10;
 #X obj 28 25 inlet;
 #X obj 28 637 outlet;
-#X text 118 334 http://www.movable-type.co.uk/scripts/latlong.html
+#X text 135 367 http://www.movable-type.co.uk/scripts/latlong.html
 ;
-#X text 115 318 implementation of the haversine formula;
+#X text 132 351 implementation of the haversine formula;
 #X obj 28 427 atan2;
 #X obj 28 406 sqrt;
 #X obj 62 405 sqrt;

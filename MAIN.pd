@@ -1,4 +1,4 @@
-#N canvas 919 972 610 579 10;
+#N canvas 1281 975 610 579 10;
 #X declare -lib Gem;
 #X obj 384 499 dac~;
 #N canvas 15 201 327 131 init 0;
@@ -12,32 +12,32 @@
 #X connect 1 0 0 0;
 #X restore 31 11 pd init;
 #X obj 394 441 catch~;
-#X obj 261 240 tgl 15 0 empty empty empty 17 7 0 10 -233412 -1 -1 0
+#X obj 386 243 tgl 15 0 empty empty empty 17 7 0 10 -233412 -1 -1 0
 1;
-#X obj 257 278 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+#X obj 382 281 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
-#X obj 257 318 tgl 15 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
+#X obj 382 321 tgl 15 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
 ;
-#X obj 259 360 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 0
+#X obj 384 363 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 0
 1;
-#X text 291 241 Pssst! Der Feind hört mit!;
-#X text 300 277 Chello;
-#X text 301 319 Voice;
-#X text 301 361 Rhodes Piano;
+#X text 416 244 Pssst! Der Feind hört mit!;
+#X text 425 280 Chello;
+#X text 426 322 Voice;
+#X text 426 364 Rhodes Piano;
 #X text 440 440 catches throw~;
 #X obj 33 50 loca.gemwin;
 #X obj 30 194 loca.mouse.simulate;
 #X obj 31 406 unpack f f;
 #X floatatom 31 464 10 0 0 0 - - -, f 10;
 #X floatatom 103 465 10 0 0 0 - - -, f 10;
-#X obj 251 206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 376 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 176 51 loca.variables;
-#X obj 265 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 390 261 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 255 296 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 380 299 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 257 339 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 382 342 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 31 239 loca.point 35.8333 128.753 sound1 40;
 #X obj 31 276 loca.point 35.8351 128.755 sound2 50;

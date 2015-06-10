@@ -1,23 +1,24 @@
-#N canvas 274 1338 989 549 10;
-#X text 229 182 calculates distance of two points;
-#X text 66 383 http://rosettacode.org/wiki/Haversine_formula;
-#X msg 69 41 36.12 -86.67;
-#X floatatom 66 253 15 0 0 0 - - -, f 15;
-#X text 66 419 The result of the test-case should be about 2887.26
+#N canvas 268 1348 651 470 10;
+#X text 202 175 calculates distance of two points;
+#X text 39 376 http://rosettacode.org/wiki/Haversine_formula;
+#X msg 40 34 36.12 -86.67;
+#X floatatom 40 247 10 0 0 0 - - -, f 10;
+#X text 39 412 The result of the test-case should be about 2887.26
 km;
-#X floatatom 169 254 15 0 0 0 - - -, f 15;
-#X floatatom 265 254 15 0 0 0 - - -, f 15;
-#X msg 469 144 36.12 -86.67;
-#X floatatom 482 262 15 0 0 0 - - -, f 15;
-#X obj 482 229 / 1000;
-#X obj 483 200 loca.distance 33.94 -118.4;
-#X msg 488 168 33.9412 -118.403;
-#X obj 67 203 loca.haversine-alt 33.94 -118.4;
-#X floatatom 170 135 15 0 0 0 - - -, f 15;
-#X text 66 328 In this test-case \, let's calculate the distance between
+#X floatatom 131 246 10 0 0 0 - - -, f 10;
+#X floatatom 223 246 10 0 0 0 - - -, f 10;
+#X msg 442 137 36.12 -86.67;
+#X floatatom 456 255 10 0 0 0 - - -, f 10;
+#X obj 456 222 / 1000;
+#X obj 456 193 loca.distance 33.94 -118.4;
+#X msg 461 161 33.9412 -118.403;
+#X obj 40 196 loca.haversine-alt 33.94 -118.4;
+#X floatatom 85 148 10 0 0 0 - - -, f 10;
+#X text 39 321 In this test-case \, let's calculate the distance between
 Nashville International Airport at 36.12 \, -86.67 and Loas Angeles
 International Airport at 33.94 \, -118.40.;
-#X obj 174 103 loca.haversine 33.94 -118.4;
+#X obj 85 96 loca.haversine 33.94 -118.4;
+#X obj 85 122 / 1000;
 #X connect 2 0 12 0;
 #X connect 2 0 15 0;
 #X connect 7 0 10 0;
@@ -27,4 +28,5 @@ International Airport at 33.94 \, -118.40.;
 #X connect 12 0 3 0;
 #X connect 12 1 5 0;
 #X connect 12 2 6 0;
-#X connect 15 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 13 0;

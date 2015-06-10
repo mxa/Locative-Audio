@@ -1,0 +1,92 @@
+#N canvas 377 1051 946 849 10;
+#X obj 36 677 outlet;
+#X obj 36 121 receive fromSystem;
+#X obj 55 630 send toGUI;
+#X msg 88 470 list /displayLabel3 position accuracy: \$1 meters;
+#X msg 106 491 list /displayLabel4 altitude accuracy: \$1 meters;
+#X msg 71 447 list /displayLabel2 altitude: \$1 meters;
+#X obj 124 315 pack 0 0;
+#X obj 36 248 unpack 0 0 0 0 0 0 0 0 0;
+#X obj 124 290 / 1000;
+#X msg 181 424 list /displayLabel1 longitude: \$1 + \$2*10^-6 degrees
+;
+#X msg 124 400 list /displayLabel0 latitude: \$1 + \$2*10^-6 degrees
+;
+#X obj 36 174 route /location /compass;
+#X msg 55 201 list /displayLabel5 compass heading: \$1 deg.;
+#X obj 36 148 list trim;
+#X obj 181 316 pack 0 0;
+#X obj 181 290 / 1000;
+#X obj 655 150 receive fromGUI;
+#X obj 655 348 send toSystem;
+#X msg 655 317 list /enableLocation \$1;
+#X obj 655 205 route /gpsToggle /volSlider;
+#X obj 655 177 list trim;
+#X obj 36 655 pack f f;
+#X msg 489 608 list /setDistanceFilter \$1;
+#X msg 537 642 list /getDistanceFilter;
+#X obj 493 676 send toSystem;
+#X obj 713 575 receive fromSystem;
+#X obj 715 599 route list;
+#X obj 716 624 route /distanceFilter;
+#X text 483 501 you can get and set the "distance filter" value \,
+which specifies how many meters to move before triggering the callback
+(and sending messages into PD). Default is 1 Value of <=0 sets it to
+"none" and all GPS updates trigger callback.;
+#X floatatom 488 582 5 0 0 0 - - -, f 5;
+#X floatatom 718 653 5 0 0 0 - - -, f 5;
+#X text 35 -141 when location data is enabled \, it is sent via a message
+"/location" with 9 numbers. Location coordinate data in iOS is a 64-bit
+floating point number (double) \; PureData is only 32-bit float \,
+so sending that number into a patch loses resolution. However \, a
+tweaky workaround (via 64-bit math in the iOS layer) is provided by
+the last 4 numbers in the message. arg 0: latitude coordinate (as 32-bit
+float) arg 1: longitude coordinate (as 32-bit float) arg 2: altitude
+(meters) arg 3: horizontal accuracy (meters radius) arg 4: vertical
+(altitude) accuracy (meters radius) arg 5: latitude "rough" = 64-bit
+value multiplied by 1000 and truncated to an integer before being sent
+into Pd arg 6: longitude "rough" (as above) arg 7: latitude "fine"
+= 64-bit value modded by 0.001 \, multiplied by 1e+06 \, and truncated
+to an integer \, before being sent into Pd So the "rough" contains
+the significant digits up to the thousandths place \, and the "fine"
+contains the next three significant digits. An original coordinate
+value of 123.457 would be turned into rough=123456 fine=789.;
+#X text 433 -109 NOTE: nothing works when this patch is open on your
+desktop/laptop...GPS data is only received when running on the device.
+;
+#X obj 702 259 s volume;
+#X connect 1 0 13 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 10 0;
+#X connect 7 0 21 0;
+#X connect 7 1 21 1;
+#X connect 7 2 5 0;
+#X connect 7 3 3 0;
+#X connect 7 4 4 0;
+#X connect 7 5 8 0;
+#X connect 7 6 15 0;
+#X connect 7 7 6 1;
+#X connect 7 8 14 1;
+#X connect 8 0 6 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 0;
+#X connect 11 0 7 0;
+#X connect 11 1 12 0;
+#X connect 12 0 2 0;
+#X connect 13 0 11 0;
+#X connect 14 0 9 0;
+#X connect 15 0 14 0;
+#X connect 16 0 20 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 19 1 33 0;
+#X connect 20 0 19 0;
+#X connect 21 0 0 0;
+#X connect 22 0 24 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 30 0;
+#X connect 29 0 22 0;

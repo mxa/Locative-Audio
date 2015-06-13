@@ -1,4 +1,4 @@
-#N canvas 471 326 871 653 10;
+#N canvas 665 172 871 685 10;
 #X obj 120 619 gemwin;
 #X msg 424 573 0 \, destroy;
 #X obj 120 246 pack f f;
@@ -13,25 +13,25 @@
 #X obj 171 465 f;
 #X obj 186 424 f;
 #X obj 424 388 t b b;
-#X obj 649 134 pix_texture;
+#X obj 649 154 pix_texture;
 #X obj 649 15 gemhead 10;
-#X obj 649 375 rectangle 4 4;
-#X obj 649 157 pix_info;
-#X obj 686 201 /;
-#X msg 724 285 4;
-#X obj 649 109 pix_image Yeungnam.png;
-#X obj 686 252 t f b;
-#X obj 686 307 *;
-#X obj 693 347 s loca.gem.width;
-#X obj 743 324 s loca.gem.height;
+#X obj 649 395 rectangle 4 4;
+#X obj 649 177 pix_info;
+#X obj 686 221 /;
+#X msg 724 305 4;
+#X obj 649 129 pix_image Yeungnam.png;
+#X obj 686 272 t f b;
+#X obj 686 327 *;
+#X obj 693 367 s loca.gem.width;
+#X obj 743 344 s loca.gem.height;
 #X obj -9 8 r \$0-aspect-ratio;
 #X obj 3 151 /;
 #X obj 18 349 s \$0-yreslabel;
 #X obj 3 192 int;
 #X obj 3 172 + 0.5;
 #X msg 18 327 label y:\$1;
-#X obj 660 62 openpanel;
-#X msg 660 83 open \$1;
+#X obj 660 82 openpanel;
+#X msg 660 103 open \$1;
 #X obj -9 29 t b f;
 #X obj 461 510 loadbang;
 #X obj 21 484 loadbang;
@@ -41,28 +41,28 @@
 #X obj 307 306 sel 0;
 #X obj 171 386 t b b b b b;
 #X obj 234 406 s loca.map.read;
-#X obj 724 232 change;
-#X obj 724 253 s \$0-aspect-ratio;
+#X obj 724 252 change;
+#X obj 724 273 s \$0-aspect-ratio;
 #X obj 3 212 t b f f b f;
 #X obj 3 553 del 500;
 #X msg 3 575 destroy \, create \, 1;
 #X obj 307 263 t b;
 #X text 173 341 on create:;
 #X text 416 342 on destroy:;
-#X obj 676 600 text define loca.map;
-#X msg 676 451 read Yeungnam.world;
-#X obj 649 430 t b b;
-#X obj 649 620 s loca.getloc;
-#X obj 649 409 r loca.map.read;
-#X obj 660 41 r \$0-load-map;
-#X obj 685 472 r \$0-load-world;
-#X msg 712 544 read \$1;
-#X obj 712 522 openpanel;
+#X obj 676 620 text define loca.map;
+#X msg 676 471 read Yeungnam.world;
+#X obj 649 450 t b b;
+#X obj 649 640 s loca.getloc;
+#X obj 649 429 r loca.map.read;
+#X obj 660 61 r \$0-load-map;
+#X obj 685 492 r \$0-load-world;
+#X msg 712 564 read \$1;
+#X obj 712 542 openpanel;
 #X obj 101 114 cnv 15 98 85 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X floatatom 120 119 5 0 0 0 x: - -, f 5;
 #X obj 116 139 hsl 55 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--262144 -262144 4900 0;
+-262144 -262144 2800 0;
 #X obj 113 139 cnv 15 60 20 empty \$0-createdestroy destroy 5 11 0
 11 -261681 -33289 0;
 #X obj 157 116 cnv 15 35 20 empty \$0-yreslabel y:647 2 11 0 10 -262144
@@ -71,9 +71,13 @@
 -262144 -1 -1;
 #X obj 114 181 bng 15 250 50 0 \$0-load-world empty load_world 17 7
 0 10 -262144 -1 -1;
-#X obj 685 495 t b b;
-#X obj 685 573 s loca.map.read;
+#X obj 685 515 t b b;
+#X obj 685 593 s loca.map.read;
 #X msg 21 509 dimen 800 600 \, FSAA 4;
+#X obj 352 131 send toGUI;
+#X msg 352 96 list /mapPanel image Yeungnam.png;
+#X obj 352 64 loadbang;
+#X obj 649 38 translateXYZ 0 0 -0.0001;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
@@ -87,7 +91,7 @@
 #X connect 13 0 1 0;
 #X connect 13 1 7 0;
 #X connect 14 0 17 0;
-#X connect 15 0 20 0;
+#X connect 15 0 72 0;
 #X connect 17 0 16 0;
 #X connect 17 1 18 0;
 #X connect 17 2 18 1;
@@ -146,4 +150,7 @@
 #X connect 66 0 67 0;
 #X connect 66 1 58 0;
 #X connect 68 0 0 0;
+#X connect 70 0 69 0;
+#X connect 71 0 70 0;
+#X connect 72 0 20 0;
 #X coords 0 -1 1 1 100 100 1 100 100;

@@ -1,4 +1,4 @@
-#N canvas 665 172 871 685 10;
+#N canvas 845 276 871 686 10;
 #X obj 120 619 gemwin;
 #X msg 424 573 0 \, destroy;
 #X obj 120 246 pack f f;
@@ -62,7 +62,7 @@
 0;
 #X floatatom 120 119 5 0 0 0 x: - -, f 5;
 #X obj 116 139 hsl 55 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--262144 -262144 2800 0;
+-262144 -262144 3500 0;
 #X obj 113 139 cnv 15 60 20 empty \$0-createdestroy destroy 5 11 0
 11 -261681 -33289 0;
 #X obj 157 116 cnv 15 35 20 empty \$0-yreslabel y:647 2 11 0 10 -262144

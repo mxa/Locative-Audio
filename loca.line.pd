@@ -1,4 +1,4 @@
-#N canvas 822 293 941 761 10;
+#N canvas 820 293 941 761 10;
 #X obj 24 690 outlet;
 #X obj 24 21 inlet;
 #X obj 24 51 t l l;
@@ -52,6 +52,7 @@
 #X connect 5 0 6 0;
 #X connect 6 0 1 1;
 #X restore 71 491 pd once;
+#X obj 126 378 del 500;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 2 1 35 0;
@@ -96,6 +97,7 @@
 #X connect 35 2 36 2;
 #X connect 35 3 36 3;
 #X connect 35 4 36 4;
-#X connect 36 0 5 0;
 #X connect 36 0 6 0;
+#X connect 36 0 38 0;
 #X connect 37 0 34 0;
+#X connect 38 0 5 0;

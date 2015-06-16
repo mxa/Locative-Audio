@@ -1,7 +1,8 @@
 35.83733 35.83093 128.75185 128.76161;
+35 83733 35 83093 128 75185 128 76161;
 
 The world file for LocA simply contains the boundaries.
 These are provided by OpenStreetMap when using the Export function.
 
 The first pair is the latitude, the second pair the longitude The line must end with a semicolon.
-Only the first line of the file is relevant, everything else is ignored.
+The first line contains the regular floating point values, the second line is in preparation of a hack allowing a little bit more precision. Everything else is ignored.

@@ -1,0 +1,6 @@
+37.55298 37.54739 126.92338 126.92880;
+37 552980 37 547390 126 923380 126 928800;
+
+The first pair is the latitude, the second pair the longitude The line must end with a semicolon.
+The first line contains the regular floating point values, the second line is for a hack allowing a little bit more precision. Make sure the "fine" number part has six digits.
+Everything else in the file is ignored.

@@ -1,0 +1,10 @@
+#N canvas 768 555 450 300 10;
+#X obj 55 107 loca.latlon-merge;
+#X msg 55 38 37 55178 126 92593;
+#X obj 56 151 unpack f f;
+#X floatatom 54 203 10 0 0 0 - - -, f 10;
+#X floatatom 121 203 10 0 0 0 - - -, f 10;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;

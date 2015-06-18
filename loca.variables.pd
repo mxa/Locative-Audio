@@ -1,4 +1,4 @@
-#N canvas 1126 529 623 502 10;
+#N canvas 1243 500 623 502 10;
 #X obj 334 1 gemmouse;
 #X obj 329 59 pack f f;
 #X obj 252 136 unpack f f;
@@ -18,6 +18,8 @@
 #X floatatom 178 154 8 0 0 0 - - -, f 8;
 #X floatatom 126 171 8 0 0 0 coor - -, f 8;
 #X floatatom 178 171 8 0 0 0 - - -, f 8;
+#X floatatom 214 186 2 0 0 0 precision-mode - -, f 2;
+#X obj 341 160 r loca.precision-mode;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 3 0;
@@ -35,4 +37,5 @@
 #X connect 7 1 17 0;
 #X connect 8 0 10 0;
 #X connect 8 1 11 0;
+#X connect 19 0 18 0;
 #X coords 0 -1 1 1 130 100 1 100 100;

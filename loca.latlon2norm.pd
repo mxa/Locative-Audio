@@ -1,5 +1,5 @@
-#N canvas 927 1267 907 621 10;
-#X obj 102 59 inlet;
+#N canvas 86 379 684 621 10;
+#X obj 102 25 inlet;
 #X msg 360 60 0;
 #X obj 360 112 text get loca.map;
 #X obj 360 145 unpack f f f f;
@@ -19,11 +19,11 @@
 #X obj 360 28 r loca.getloc;
 #X obj 459 29 loadbang;
 #X obj 102 283 abs;
-#X obj 177 491 print;
-#X msg 177 450 warning: point \$1 \$2 is out of bounds!;
-#X obj 177 354 < 0;
-#X obj 177 376 sel 1;
-#X obj 177 425 list;
+#X obj 194 519 print;
+#X msg 194 478 warning: point \$1 \$2 is out of bounds!;
+#X obj 195 382 < 0;
+#X obj 195 404 sel 1;
+#X obj 194 453 list;
 #N canvas 1195 1210 450 300 once 0;
 #X obj 84 48 inlet;
 #X obj 87 188 outlet;
@@ -35,9 +35,10 @@
 #X connect 3 0 1 0;
 #X connect 3 1 4 0;
 #X connect 4 0 2 1;
-#X restore 176 397 pd once;
-#X connect 0 0 4 0;
-#X connect 0 0 24 1;
+#X restore 194 425 pd once;
+#X obj 102 67 t l l;
+#X obj 158 345 t f f;
+#X connect 0 0 26 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
@@ -54,8 +55,7 @@
 #X connect 10 0 13 1;
 #X connect 10 1 8 0;
 #X connect 11 0 6 0;
-#X connect 12 0 6 1;
-#X connect 12 0 22 0;
+#X connect 12 0 27 0;
 #X connect 13 0 12 0;
 #X connect 14 0 19 0;
 #X connect 15 0 5 0;
@@ -68,3 +68,7 @@
 #X connect 23 0 25 0;
 #X connect 24 0 21 0;
 #X connect 25 0 24 0;
+#X connect 26 0 4 0;
+#X connect 26 1 24 1;
+#X connect 27 0 6 1;
+#X connect 27 1 22 0;

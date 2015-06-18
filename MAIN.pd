@@ -1,4 +1,4 @@
-#N canvas 926 82 606 904 10;
+#N canvas 1235 87 606 904 10;
 #X declare -lib Gem;
 #X obj 452 657 dac~;
 #N canvas 15 204 327 131 init 0;
@@ -12,26 +12,26 @@
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X restore 34 20 pd init;
-#X obj 316 273 tgl 15 0 empty empty empty 17 7 0 10 -233412 -1 -1 0
-1;
+#X obj 316 273 tgl 15 0 empty empty empty 17 7 0 10 -233412 -1 -1 7.34128
+7.34128;
 #X obj 319 347 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #X obj 323 434 tgl 15 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
 ;
-#X obj 352 523 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 0
-1;
+#X obj 352 523 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 9.03033
+9.03033;
 #X obj 44 230 loca.mouse.simulate;
 #X obj 31 685 unpack f f;
 #X floatatom 31 715 6 0 0 0 - - -, f 6;
 #X floatatom 88 716 6 0 0 0 - - -, f 6;
-#X obj 317 229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 317 229 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 139 51 loca.variables;
-#X obj 320 306 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 320 306 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 321 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 330 396 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 358 478 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 358 478 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 345 644 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -41,16 +41,14 @@
 1;
 #X obj 33 51 loca.gemwin;
 #X obj 373 240 hsl 200 15 20 1500 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 12265 1;
+-262144 -1 -1 12276 1;
 #X floatatom 383 267 5 0 0 0 - - -, f 5;
 #X obj 370 287 v loca.scale;
 #X obj 370 193 loadbang;
 #X obj 31 205 loca.coordinates.sensor;
-#X obj 31 500 loca.point 37 523748 126 997260 thetrainboundfor 200
-;
 #X obj 275 51 loca.world.latlon;
-#X msg 34 794 550856;
-#X msg 83 795 927315;
+#X msg 34 794 551839;
+#X msg 83 795 926524;
 #X obj 123 691 gemmouse;
 #X msg 83 770 set \$1;
 #X obj 83 750 f;
@@ -59,41 +57,43 @@
 #X obj 34 750 f;
 #X obj 31 620 loca.line 37 551156 126 926513 37 551422 126 927347 turnstile
 ;
-#X obj 31 323 loca.point 37 52372 126 99742 scooter 300;
-#X obj 31 415 loca.point 37 524062 126 996886 streetnoise 300;
-#X obj 31 253 loca.point 37 551655 126 926274 protest 350;
 #X msg 370 218 933;
-#X connect 6 0 38 0;
+#X obj 31 253 loca.point 37 551655 126 926274 protest 350;
+#X obj 31 323 loca.ambience 37 52372 126 99742 scooter 300;
+#X obj 31 415 loca.ambience 37 549731 126 926491 streetnoise 300;
+#X obj 31 500 loca.point 37 550556 126 926621 thetrainboundfor 300
+;
+#X connect 6 0 36 0;
 #X connect 7 0 8 0;
 #X connect 7 1 9 0;
-#X connect 8 0 34 1;
-#X connect 9 0 31 1;
-#X connect 10 0 38 3;
-#X connect 12 0 36 3;
-#X connect 13 0 37 3;
-#X connect 14 0 25 3;
+#X connect 8 0 33 1;
+#X connect 9 0 30 1;
+#X connect 10 0 36 3;
+#X connect 12 0 37 1;
+#X connect 13 0 38 1;
+#X connect 14 0 39 3;
 #X connect 16 0 0 1;
 #X connect 17 0 0 0;
-#X connect 18 0 35 5;
+#X connect 18 0 34 1;
 #X connect 20 0 21 0;
 #X connect 20 0 22 0;
-#X connect 23 0 39 0;
-#X connect 24 0 38 0;
-#X connect 25 0 35 0;
-#X connect 25 1 5 0;
-#X connect 29 2 32 0;
-#X connect 30 0 28 0;
+#X connect 23 0 35 0;
+#X connect 24 0 36 0;
+#X connect 28 2 31 0;
+#X connect 29 0 27 0;
+#X connect 30 0 29 0;
 #X connect 31 0 30 0;
-#X connect 32 0 31 0;
-#X connect 32 0 34 0;
-#X connect 33 0 27 0;
-#X connect 34 0 33 0;
-#X connect 35 0 7 0;
-#X connect 35 1 15 0;
+#X connect 31 0 33 0;
+#X connect 32 0 26 0;
+#X connect 33 0 32 0;
+#X connect 34 0 7 0;
+#X connect 34 1 15 0;
+#X connect 35 0 20 0;
 #X connect 36 0 37 0;
-#X connect 36 1 3 0;
-#X connect 37 0 25 0;
-#X connect 37 1 4 0;
-#X connect 38 0 36 0;
-#X connect 38 1 2 0;
-#X connect 39 0 20 0;
+#X connect 36 1 2 0;
+#X connect 37 0 38 0;
+#X connect 37 1 3 0;
+#X connect 38 0 39 0;
+#X connect 38 1 4 0;
+#X connect 39 0 34 0;
+#X connect 39 1 5 0;

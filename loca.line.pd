@@ -1,4 +1,4 @@
-#N canvas 520 215 1014 761 10;
+#N canvas 1029 209 1014 761 10;
 #X obj 24 690 outlet;
 #X obj 24 21 inlet;
 #X obj 24 51 t l l;
@@ -55,6 +55,11 @@
 #X msg 164 565 0 \, 1 10;
 #X obj 595 373 loca.latlon2norm;
 #X obj 706 373 loca.latlon2norm;
+#X obj 339 676 s toGUI;
+#X msg 339 646 list /displayLabel16 triggered file: \$1;
+#X obj 401 675 print;
+#X obj 334 577 t b;
+#X obj 338 618 symbol \$9;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 2 1 25 0;
@@ -81,6 +86,7 @@
 #X connect 25 0 26 0;
 #X connect 26 0 4 0;
 #X connect 26 0 21 0;
+#X connect 26 0 44 0;
 #X connect 27 0 29 0;
 #X connect 28 0 27 0;
 #X connect 29 0 39 0;
@@ -97,3 +103,7 @@
 #X connect 38 0 34 0;
 #X connect 39 0 10 0;
 #X connect 40 0 16 0;
+#X connect 42 0 41 0;
+#X connect 42 0 43 0;
+#X connect 44 0 45 0;
+#X connect 45 0 42 0;

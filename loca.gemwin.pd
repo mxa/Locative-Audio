@@ -1,4 +1,4 @@
-#N canvas 193 132 946 848 10;
+#N canvas 584 305 946 848 10;
 #X obj 120 619 gemwin;
 #X msg 424 573 0 \, destroy;
 #X obj 120 246 pack f f;
@@ -58,10 +58,10 @@
 0;
 #X floatatom 120 119 5 0 0 0 x: - -, f 5;
 #X obj 116 139 hsl 55 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--262144 -262144 3300 0;
+-262144 -262144 3900 0;
 #X obj 113 139 cnv 15 60 20 empty \$0-createdestroy destroy 5 11 0
 11 -261681 -33289 0;
-#X obj 157 116 cnv 15 35 20 empty \$0-yreslabel y:671 2 11 0 10 -262144
+#X obj 157 116 cnv 15 35 20 empty \$0-yreslabel y:777 2 11 0 10 -262144
 -1 0;
 #X obj 114 167 bng 15 250 50 0 \$0-load-map empty load_map 17 7 0 10
 -262144 -1 -1;
@@ -102,15 +102,10 @@
 #X connect 10 0 11 0;
 #X connect 12 0 9 0;
 #X restore 683 647 pd test-for-precision;
-#X msg 120 31 set 500;
-#X msg 21 509 dimen 500 500 \, FSAA 4;
-#X msg 352 96 list /mapPanel image hongik.png;
-#X obj 649 129 pix_image hongik.png;
-#X msg 700 472 read hongik.world;
 #X obj 649 450 t b b b b;
 #X obj 666 706 text get loca.map;
 #X msg 666 680 1;
-#N canvas 3 71 562 300 calibration 0;
+#N canvas 3 74 562 300 calibration 0;
 #X obj 41 23 inlet;
 #X obj 44 189 outlet;
 #X obj 98 8 r loca.lat.offset;
@@ -145,6 +140,11 @@
 #X connect 11 1 10 1;
 #X restore 666 734 pd calibration;
 #X obj 666 777 text set loca.map 1;
+#X msg 352 96 list /mapPanel image hongik-closeup.png;
+#X obj 649 129 pix_image hongik-closeup.png;
+#X msg 700 472 read hongik-closeup.world;
+#X msg 120 31 set 400;
+#X msg 21 509 dimen 400 400 \, FSAA 4;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
@@ -177,12 +177,12 @@
 #X connect 28 0 27 0;
 #X connect 29 0 26 0;
 #X connect 30 0 31 0;
-#X connect 31 0 71 0;
+#X connect 31 0 74 0;
 #X connect 32 0 56 0;
 #X connect 32 1 25 1;
 #X connect 33 0 7 0;
-#X connect 34 0 69 0;
-#X connect 35 0 68 0;
+#X connect 34 0 77 0;
+#X connect 35 0 76 0;
 #X connect 36 0 0 0;
 #X connect 37 0 38 0;
 #X connect 37 1 13 0;
@@ -200,7 +200,7 @@
 #X connect 43 0 44 0;
 #X connect 44 0 0 0;
 #X connect 45 0 4 0;
-#X connect 50 0 73 0;
+#X connect 50 0 68 0;
 #X connect 51 0 30 0;
 #X connect 52 0 54 0;
 #X connect 53 0 48 0;
@@ -209,20 +209,20 @@
 #X connect 56 0 25 0;
 #X connect 56 0 11 0;
 #X connect 57 0 45 0;
-#X connect 64 0 70 0;
-#X connect 65 0 71 0;
+#X connect 64 0 73 0;
+#X connect 65 0 74 0;
 #X connect 66 0 62 0;
 #X connect 66 1 53 0;
-#X connect 68 0 56 0;
-#X connect 69 0 0 0;
-#X connect 70 0 63 0;
-#X connect 71 0 14 0;
-#X connect 72 0 48 0;
-#X connect 73 0 49 0;
-#X connect 73 1 75 0;
-#X connect 73 2 67 0;
-#X connect 73 3 72 0;
-#X connect 74 0 76 0;
-#X connect 75 0 74 0;
-#X connect 76 0 77 0;
+#X connect 68 0 49 0;
+#X connect 68 1 70 0;
+#X connect 68 2 67 0;
+#X connect 68 3 75 0;
+#X connect 69 0 71 0;
+#X connect 70 0 69 0;
+#X connect 71 0 72 0;
+#X connect 73 0 63 0;
+#X connect 74 0 14 0;
+#X connect 75 0 48 0;
+#X connect 76 0 56 0;
+#X connect 77 0 0 0;
 #X coords 0 -1 1 1 100 100 1 100 100;

@@ -1,4 +1,4 @@
-#N canvas 444 192 718 808 10;
+#N canvas 444 195 718 808 10;
 #X obj 24 690 outlet;
 #X obj 24 21 inlet;
 #X obj 158 512 change;
@@ -43,6 +43,11 @@
 #X obj 93 374 loca.haversine \$1 \$2 \$3 \$4;
 #X obj 271 593 > 0;
 #X obj 480 310 loca.latlon2norm;
+#X obj 297 741 s toGUI;
+#X msg 297 711 list /displayLabel16 triggered file: \$1;
+#X obj 296 683 symbol \$5;
+#X obj 359 740 print;
+#X obj 288 639 sel 1;
 #X connect 1 0 32 0;
 #X connect 2 0 4 0;
 #X connect 3 0 20 0;
@@ -91,4 +96,9 @@
 #X connect 40 0 15 0;
 #X connect 41 0 24 0;
 #X connect 42 0 37 0;
+#X connect 42 0 48 0;
 #X connect 43 0 13 0;
+#X connect 45 0 44 0;
+#X connect 45 0 47 0;
+#X connect 46 0 45 0;
+#X connect 48 0 46 0;

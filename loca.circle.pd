@@ -1,4 +1,4 @@
-#N canvas 526 173 718 808 10;
+#N canvas 526 176 718 808 10;
 #X obj 24 775 outlet;
 #X obj 24 21 inlet;
 #X obj 93 444 change;
@@ -14,7 +14,7 @@
 #X obj 514 351 unpack f f;
 #X obj 366 399 translateXYZ 0 0 0.001;
 #X obj 366 191 t a b;
-#X obj 639 31 inlet;
+#X obj 366 34 inlet;
 #X obj 366 542 circle 0.3;
 #X obj 48 683 readsf~ 2;
 #X obj 48 755 throw~ R;

@@ -1,4 +1,4 @@
-#N canvas 768 555 450 300 10;
+#N canvas 1287 676 450 300 10;
 #X obj 55 107 loca.latlon-merge;
 #X msg 55 38 37 55178 126 92593;
 #X obj 56 151 unpack f f;

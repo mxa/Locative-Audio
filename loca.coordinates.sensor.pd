@@ -1,72 +1,71 @@
-#N canvas 772 135 946 866 10;
-#X obj 299 414 outlet;
-#X obj 36 121 receive fromSystem;
-#X obj 36 693 send toGUI;
-#X obj 36 174 route /location /compass;
-#X msg 106 202 list /displayLabel5 compass heading: \$1 deg.;
-#X obj 36 148 list trim;
-#X obj 554 182 receive fromGUI;
-#X obj 554 269 send toSystem;
-#X msg 554 247 list /enableLocation \$1;
-#X obj 554 204 list trim;
-#X msg 491 629 list /setDistanceFilter \$1;
-#X msg 520 659 list /getDistanceFilter;
-#X obj 491 693 send toSystem;
-#X obj 715 596 receive fromSystem;
-#X obj 715 620 route list;
-#X obj 715 645 route /distanceFilter;
-#X text 485 522 you can get and set the "distance filter" value \,
+#N canvas 769 138 946 866 10;
+#X obj 302 566 outlet;
+#X obj 39 273 receive fromSystem;
+#X obj 39 845 send toGUI;
+#X obj 39 326 route /location /compass;
+#X msg 109 354 list /displayLabel5 compass heading: \$1 deg.;
+#X obj 39 300 list trim;
+#X obj 557 334 receive fromGUI;
+#X obj 557 421 send toSystem;
+#X msg 557 399 list /enableLocation \$1;
+#X obj 557 356 list trim;
+#X msg 494 781 list /setDistanceFilter \$1;
+#X msg 523 811 list /getDistanceFilter;
+#X obj 494 845 send toSystem;
+#X obj 718 748 receive fromSystem;
+#X obj 718 772 route list;
+#X obj 718 797 route /distanceFilter;
+#X text 488 674 you can get and set the "distance filter" value \,
 which specifies how many meters to move before triggering the callback
 (and sending messages into PD). Default is 1 Value of <=0 sets it to
 "none" and all GPS updates trigger callback.;
-#X floatatom 491 603 5 0 0 0 - - -, f 5;
-#X floatatom 715 668 5 0 0 0 - - -, f 5;
-#X text 34 -134 NOTE: nothing works when this patch is open on your
-desktop/laptop...GPS data is only received when running on the device.
-;
-#X obj 554 225 route /gpsToggle;
-#X text 28 -48 when location data is enabled \, it is sent via a message
+#X floatatom 494 755 5 0 0 0 - - -, f 5;
+#X floatatom 718 820 5 0 0 0 - - -, f 5;
+#X text 37 18 NOTE: nothing works when this patch is open on your desktop/laptop...GPS
+data is only received when running on the device.;
+#X obj 557 377 route /gpsToggle;
+#X text 31 104 when location data is enabled \, it is sent via a message
 "/location" with 9 numbers. Location coordinate data in iOS is a 64-bit
 floating point number (double) \; PureData is only 32-bit float \,
 so sending that number into a patch loses resolution. However \, a
 tweaky workaround (via 64-bit math in the iOS layer) is provided by
 the last 4 numbers in the message.;
-#X text 422 -132 arg 0: latitude coordinate (as 32-bit float);
-#X text 422 -114 arg 1: longitude coordinate (as 32-bit float);
-#X text 422 -79 arg 3: horizontal accuracy (meters radius);
-#X text 423 -96 arg 2: altitude (meters);
-#X text 424 -59 arg 4: vertical (altitude) accuracy (meters radius)
+#X text 463 20 arg 0: latitude coordinate (as 32-bit float);
+#X text 463 38 arg 1: longitude coordinate (as 32-bit float);
+#X text 463 73 arg 3: horizontal accuracy (meters radius);
+#X text 464 56 arg 2: altitude (meters);
+#X text 465 93 arg 4: vertical (altitude) accuracy (meters radius)
 ;
-#X text 423 -39 arg 5: latitude "rough" = 64-bit value multiplied by
+#X text 464 113 arg 5: latitude "rough" = 64-bit value multiplied by
 1000 and truncated to an integer before being sent into Pd;
-#X text 425 14 arg 7: latitude "fine" = 64-bit value modded by 0.001
+#X text 466 166 arg 7: latitude "fine" = 64-bit value modded by 0.001
 \, multiplied by 1e+06 \, and truncated to an integer \, before being
 sent into Pd So the "rough" contains the significant digits up to the
 thousandths place \, and the "fine" contains the next three significant
 digits. An original coordinate value of 123.457 would be turned into
 rough=123456 fine=789., f 64;
-#X text 426 -7 arg 6: longitude "rough" (as above);
-#X msg 71 423 list /displayLabel2 altitude: \$1 m;
-#X msg 36 369 list /displayLabel6 32-bit lat: \$1;
-#X obj 36 255 unpack f f f f f f f f f;
-#X text 425 103 arg 8: longitude "fine" (as above);
-#X msg 53 397 list /displayLabel7 32-bit lon: \$1;
-#X msg 124 502 list /displayLabel0 lat rough: \$1;
-#X msg 140 531 list /displayLabel1 lon rough: \$1;
-#X msg 159 558 list /displayLabel8 lat fine: \$1;
-#X msg 177 585 list /displayLabel9 lon fine: \$1;
-#X msg 106 479 list /displayLabel4 alt. accuracy: \$1 m;
-#X msg 87 450 list /displayLabel3 position accuracy: \$1 m;
-#X obj 214 341 / 1000;
-#X obj 262 341 / 1000;
-#X obj 299 370 pack f f f f;
-#X msg 176 658 list /displayLabel10 precision-mode: \$1;
-#X obj 176 635 v loca.precision-mode;
-#X obj 177 610 t b;
-#X obj 394 419 unpack f f;
-#X msg 395 472 list /displayLabel11 lat-Pd: \$1;
-#X msg 451 443 list /displayLabel12 lon-Pd: \$1;
-#X obj 299 391 loca.precision-mode;
+#X text 467 145 arg 6: longitude "rough" (as above);
+#X msg 74 575 list /displayLabel2 altitude: \$1 m;
+#X msg 39 521 list /displayLabel6 32-bit lat: \$1;
+#X obj 39 407 unpack f f f f f f f f f;
+#X text 466 255 arg 8: longitude "fine" (as above);
+#X msg 56 549 list /displayLabel7 32-bit lon: \$1;
+#X msg 127 654 list /displayLabel0 lat rough: \$1;
+#X msg 143 683 list /displayLabel1 lon rough: \$1;
+#X msg 162 710 list /displayLabel8 lat fine: \$1;
+#X msg 180 737 list /displayLabel9 lon fine: \$1;
+#X msg 109 631 list /displayLabel4 alt. accuracy: \$1 m;
+#X msg 90 602 list /displayLabel3 position accuracy: \$1 m;
+#X obj 217 493 / 1000;
+#X obj 265 493 / 1000;
+#X obj 302 522 pack f f f f;
+#X msg 179 810 list /displayLabel10 precision-mode: \$1;
+#X obj 179 787 v loca.precision-mode;
+#X obj 180 762 t b;
+#X obj 397 571 unpack f f;
+#X msg 398 624 list /displayLabel11 lat-Pd: \$1;
+#X msg 454 595 list /displayLabel12 lon-Pd: \$1;
+#X obj 302 543 loca.precision-mode;
 #X connect 1 0 5 0;
 #X connect 3 0 32 0;
 #X connect 3 1 4 0;

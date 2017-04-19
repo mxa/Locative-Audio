@@ -1,4 +1,4 @@
-#N canvas 1029 209 1014 761 10;
+#N canvas 786 192 1014 761 10;
 #X obj 24 690 outlet;
 #X obj 24 21 inlet;
 #X obj 24 51 t l l;
@@ -11,7 +11,7 @@
 #X text 94 6 Distance between given point and current loc;
 #X obj 595 394 loca.norm2gem;
 #X obj 463 375 colorRGB 0 0 1 0.3;
-#X obj 948 33 inlet;
+#X obj 460 27 inlet;
 #X obj 473 399 loadbang;
 #X obj 463 496 curve 2;
 #X msg 472 423 width 3 \, draw line;
@@ -60,9 +60,10 @@
 #X obj 401 675 print;
 #X obj 334 577 t b;
 #X obj 338 618 symbol \$9;
+#X obj 146 112 spigot 1;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
-#X connect 2 1 25 0;
+#X connect 2 1 46 0;
 #X connect 3 0 20 0;
 #X connect 5 0 22 0;
 #X connect 6 0 19 0;
@@ -70,6 +71,7 @@
 #X connect 10 0 17 0;
 #X connect 11 0 14 0;
 #X connect 12 0 6 0;
+#X connect 12 0 46 1;
 #X connect 13 0 15 0;
 #X connect 15 0 14 0;
 #X connect 16 0 18 0;
@@ -107,3 +109,4 @@
 #X connect 42 0 43 0;
 #X connect 44 0 45 0;
 #X connect 45 0 42 0;
+#X connect 46 0 25 0;

@@ -1,4 +1,4 @@
-#N canvas 526 176 718 808 10;
+#N canvas 1049 135 718 808 10;
 #X obj 24 775 outlet;
 #X obj 24 21 inlet;
 #X obj 93 444 change;
@@ -22,15 +22,15 @@
 #X obj 112 734 *~;
 #X obj 48 628 symbol \$5;
 #X obj 93 422 < \$6;
-#X obj 93 125 list prepend;
-#X obj 93 149 route 0 1;
+#X obj 93 148 list prepend;
+#X obj 93 172 route 0 1;
 #X obj 118 317 loca.precision-distance \$1 \$2 \$3 \$4;
 #X obj 514 285 loca.latlon-merge;
 #X obj 514 236 list \$1 \$2 \$3 \$4;
 #X obj 423 451 \$6;
-#X obj 162 74 v loca.precision-mode;
+#X obj 162 97 v loca.precision-mode;
 #X obj 24 51 t l l b;
-#X obj 162 99 change;
+#X obj 162 122 change;
 #X obj 450 493 v loca.scale;
 #X obj 423 473 t f b;
 #X obj 366 432 t a b;
@@ -50,6 +50,7 @@
 #X msg 244 714 list /displayLabel16 triggered file: \$1;
 #X obj 243 686 symbol \$5;
 #X obj 306 743 print;
+#X obj 62 95 spigot 1;
 #X connect 1 0 30 0;
 #X connect 2 0 4 0;
 #X connect 2 0 6 0;
@@ -68,6 +69,7 @@
 #X connect 14 0 9 0;
 #X connect 14 1 27 0;
 #X connect 15 0 8 0;
+#X connect 15 0 51 1;
 #X connect 17 0 3 0;
 #X connect 17 1 20 0;
 #X connect 20 0 19 0;
@@ -82,7 +84,7 @@
 #X connect 28 0 33 0;
 #X connect 29 0 31 0;
 #X connect 30 0 0 0;
-#X connect 30 1 23 0;
+#X connect 30 1 51 0;
 #X connect 30 2 29 0;
 #X connect 31 0 23 1;
 #X connect 32 0 36 1;
@@ -107,3 +109,4 @@
 #X connect 48 0 47 0;
 #X connect 48 0 50 0;
 #X connect 49 0 48 0;
+#X connect 51 0 23 0;

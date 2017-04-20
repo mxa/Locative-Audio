@@ -1,4 +1,4 @@
-#N canvas 2838 241 666 965 10;
+#N canvas 879 78 666 965 10;
 #X declare -lib Gem;
 #X obj 441 739 dac~;
 #N canvas 537 343 327 131 init 0;
@@ -32,7 +32,7 @@
 1;
 #X obj 397 608 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 491 601 catch~ L;
+#X obj 483 601 catch~ L;
 #X obj 426 602 catch~ R;
 #X obj 418 544 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -44,12 +44,12 @@
 #X obj 370 193 loadbang;
 #X obj 31 205 loca.coordinates.sensor;
 #X obj 275 51 loca.world.latlon;
-#X msg 31 770 956856;
-#X msg 103 771 72277.3;
+#X msg 31 737 955615;
+#X msg 103 738 74998.7;
 #X text 262 819 5.49989e+06 9.25522e+06;
 #X text 259 803 549427 926570;
 #X text 416 804 difference: 562 -1048;
-#X obj 405 930 s loca.lon.offset;
+#X obj 401 927 s loca.lon.offset;
 #X obj 279 930 s loca.lat.offset;
 #X obj 274 850 loadbang;
 #X msg 279 903 562;
@@ -60,12 +60,12 @@
 #X obj 356 427 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 370 218 800;
-#X obj 31 698 loca.position;
+#X obj 31 665 loca.position;
 #X obj 355 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 399 322 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 30 662 loca.effect;
+#X obj 252 707 loca.effect;
 #X obj 31 627 loca.circle 56 953715 24 74628 streetnoise 150;
 #X obj 31 577 loca.line 56 953321 24 73798 56 953457 24 75669 turnstile
 ;
@@ -77,22 +77,13 @@
 ;
 #X obj 31 394 loca.ambience 56 952769 24 76170 streetnoise 450;
 #X obj 31 538 loca.ambience 56 957271 24 76474 scooter 1200;
-#N canvas 2645 860 450 300 effects 0;
-#X obj 125 74 inlet~;
-#X obj 253 74 inlet~;
-#X obj 124 140 outlet~;
-#X obj 254 142 outlet~;
-#X text 156 184 currently none;
-#X connect 0 0 2 0;
-#X connect 1 0 3 0;
-#X restore 424 665 pd effects;
 #X connect 6 0 46 0;
 #X connect 7 0 46 1;
 #X connect 9 0 44 1;
 #X connect 10 0 48 1;
 #X connect 11 0 43 1;
-#X connect 13 0 50 1;
-#X connect 14 0 50 0;
+#X connect 13 0 0 1;
+#X connect 14 0 0 0;
 #X connect 15 0 42 1;
 #X connect 17 0 18 0;
 #X connect 17 0 19 0;
@@ -106,8 +97,7 @@
 #X connect 37 0 23 0;
 #X connect 37 1 24 0;
 #X connect 39 0 47 1;
-#X connect 40 0 37 0;
-#X connect 41 0 40 0;
+#X connect 41 0 37 0;
 #X connect 42 0 41 0;
 #X connect 42 1 12 0;
 #X connect 43 0 49 0;
@@ -123,5 +113,3 @@
 #X connect 48 0 45 0;
 #X connect 48 1 4 0;
 #X connect 49 0 42 0;
-#X connect 50 0 0 0;
-#X connect 50 1 0 1;

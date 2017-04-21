@@ -1,4 +1,4 @@
-#N canvas 755 192 946 848 10;
+#N canvas 752 195 946 848 10;
 #X obj 134 622 gemwin;
 #X msg 438 576 0 \, destroy;
 #X obj 134 249 pack f f;
@@ -58,10 +58,10 @@
 0;
 #X floatatom 120 118 5 0 0 0 x: - -, f 5;
 #X obj 116 138 hsl 55 20 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--262144 -262144 2300 0;
+-262144 -262144 3700 0;
 #X obj 113 138 cnv 15 60 20 empty \$0-createdestroy destroy 5 11 0
 11 -261681 -33289 0;
-#X obj 157 115 cnv 15 35 20 empty \$0-yreslabel y:893 2 11 0 10 -262144
+#X obj 157 115 cnv 15 35 20 empty \$0-yreslabel y:849 2 11 0 10 -262144
 -1 0;
 #X obj 114 166 bng 15 250 50 0 \$0-load-map empty load_map 17 7 0 10
 -262144 -1 -1;
@@ -141,10 +141,10 @@
 #X restore 680 737 pd calibration;
 #X obj 680 780 text set loca.map 1;
 #X msg 134 34 set 400;
-#X msg 35 512 dimen 400 400 \, FSAA 4;
 #X msg 366 99 list /mapPanel image RISEBA.png;
 #X obj 663 132 pix_image RISEBA.png;
 #X msg 714 475 read RISEBA.world;
+#X msg 35 512 dimen 400 400 \, FSAA 4 \, title LocA-map;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
@@ -177,11 +177,11 @@
 #X connect 28 0 27 0;
 #X connect 29 0 26 0;
 #X connect 30 0 31 0;
-#X connect 31 0 76 0;
+#X connect 31 0 75 0;
 #X connect 32 0 56 0;
 #X connect 32 1 25 1;
 #X connect 33 0 7 0;
-#X connect 34 0 74 0;
+#X connect 34 0 77 0;
 #X connect 35 0 73 0;
 #X connect 36 0 0 0;
 #X connect 37 0 38 0;
@@ -209,20 +209,20 @@
 #X connect 56 0 25 0;
 #X connect 56 0 11 0;
 #X connect 57 0 45 0;
-#X connect 64 0 75 0;
-#X connect 65 0 76 0;
+#X connect 64 0 74 0;
+#X connect 65 0 75 0;
 #X connect 66 0 62 0;
 #X connect 66 1 53 0;
 #X connect 68 0 49 0;
 #X connect 68 1 70 0;
 #X connect 68 2 67 0;
-#X connect 68 3 77 0;
+#X connect 68 3 76 0;
 #X connect 69 0 71 0;
 #X connect 70 0 69 0;
 #X connect 71 0 72 0;
 #X connect 73 0 56 0;
-#X connect 74 0 0 0;
-#X connect 75 0 63 0;
-#X connect 76 0 14 0;
-#X connect 77 0 48 0;
+#X connect 74 0 63 0;
+#X connect 75 0 14 0;
+#X connect 76 0 48 0;
+#X connect 77 0 0 0;
 #X coords 0 -1 1 1 100 100 1 100 100;

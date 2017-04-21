@@ -1,18 +1,18 @@
-#N canvas 426 344 621 349 10;
-#X obj 101 114 cnv 15 128 85 empty empty empty 20 12 0 14 -262144 -66577
+#N canvas 426 372 621 349 10;
+#X obj 101 113 cnv 15 128 85 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 101 11 text get loca.map;
-#X msg 101 -16 1;
-#X obj 101 44 unpack f f f f f f f f;
-#X obj 101 -43 r loca.getloc;
-#X floatatom 132 127 2 0 0 0 - - -, f 2;
-#X floatatom 101 152 3 0 0 0 - - -, f 3;
-#X floatatom 134 182 2 0 0 0 - - -, f 2;
-#X floatatom 171 153 3 0 0 0 - - -, f 3;
-#X floatatom 146 127 6 0 0 0 - - -, f 6;
-#X floatatom 148 182 6 0 0 0 - - -, f 6;
-#X floatatom 121 152 6 0 0 0 - - -, f 6;
-#X floatatom 191 153 6 0 0 0 - - -, f 6;
+#X obj 105 41 text get loca.map;
+#X msg 105 22 1;
+#X obj 105 64 unpack f f f f f f f f;
+#X obj 105 2 r loca.getloc;
+#X floatatom 128 126 2 0 0 0 - - -, f 2;
+#X floatatom 101 151 3 0 0 0 - - -, f 3;
+#X floatatom 130 181 2 0 0 0 - - -, f 2;
+#X floatatom 166 151 3 0 0 0 - - -, f 3;
+#X floatatom 146 126 6 0 0 0 - - -, f 6;
+#X floatatom 148 181 6 0 0 0 - - -, f 6;
+#X floatatom 121 151 6 0 0 0 - - -, f 6;
+#X floatatom 186 151 6 0 0 0 - - -, f 6;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
 #X connect 3 0 5 0;

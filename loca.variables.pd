@@ -1,5 +1,5 @@
-#N canvas 1243 500 623 502 10;
-#X obj 334 1 gemmouse;
+#N canvas 1240 503 623 502 10;
+#X obj 329 26 gemmouse;
 #X obj 329 59 pack f f;
 #X obj 252 136 unpack f f;
 #X obj 329 90 loca.pix2norm;

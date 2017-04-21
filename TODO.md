@@ -1,7 +1,7 @@
 
 To implement:
 
-* playback stereo soundfiles
+* fix loca.line for horizontal/vertical lines
 * replace example soundfiles
 * line object trigger when crossed
 * out of bounds trigger

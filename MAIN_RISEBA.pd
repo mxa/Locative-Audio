@@ -1,7 +1,7 @@
-#N canvas 879 78 666 965 10;
+#N canvas 511 81 666 965 10;
 #X declare -lib Gem;
 #X obj 441 739 dac~;
-#N canvas 537 343 327 131 init 0;
+#N canvas 534 346 327 131 init 0;
 #X msg 95 42 6.371e+06;
 #X obj 95 20 loadbang;
 #X obj 24 20 loadbang;
@@ -26,26 +26,26 @@
 #X obj 139 51 loca.variables;
 #X obj 336 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 329 375 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 329 375 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 399 484 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 399 484 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 397 608 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 483 601 catch~ L;
 #X obj 426 602 catch~ R;
-#X obj 418 544 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 418 544 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 33 51 loca.gemwin;
 #X obj 373 240 hsl 200 15 20 1500 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 8988 1;
+-262144 -1 -1 10488 1;
 #X floatatom 383 267 5 0 0 0 - - -, f 5;
 #X obj 370 287 v loca.scale;
 #X obj 370 193 loadbang;
 #X obj 31 205 loca.coordinates.sensor;
 #X obj 275 51 loca.world.latlon;
-#X msg 31 737 955615;
-#X msg 103 738 74998.7;
+#X msg 31 866 954338;
+#X msg 103 867 75623.5;
 #X text 262 819 5.49989e+06 9.25522e+06;
 #X text 259 803 549427 926570;
 #X text 416 804 difference: 562 -1048;
@@ -57,59 +57,67 @@
 #X msg 312 902 -1048;
 #X obj 350 472 tgl 15 0 empty empty empty 17 7 0 10 -42868 -1 -1 0
 1;
-#X obj 356 427 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 356 427 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 370 218 800;
-#X obj 31 665 loca.position;
+#X obj 31 794 loca.position;
 #X obj 355 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 399 322 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 399 322 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 252 707 loca.effect;
-#X obj 31 627 loca.circle 56 953715 24 74628 streetnoise 150;
-#X obj 31 577 loca.line 56 953321 24 73798 56 953457 24 75669 turnstile
-;
 #X obj 31 500 loca.point 56 953170 24 75511 thetrainboundfor 180;
 #X obj 31 307 loca.ambience 56 955703 24 73783 scooter 1200;
 #X obj 31 449 loca.point 56 953486 24 76104 conversations 300;
 #X obj 30 259 loca.point 56 953523 24 74687 protest 350;
-#X obj 31 345 loca.line 56 953522 24 74338 56 952503 24 74839 jogio
-;
 #X obj 31 394 loca.ambience 56 952769 24 76170 streetnoise 450;
 #X obj 31 538 loca.ambience 56 957271 24 76474 scooter 1200;
-#X connect 6 0 46 0;
-#X connect 7 0 46 1;
-#X connect 9 0 44 1;
-#X connect 10 0 48 1;
-#X connect 11 0 43 1;
+#X obj 31 627 loca.circle 56 953715 24 74628 streetnoise 150;
+#X obj 31 577 loca.line 56 955574 24 71966 56 955574 24 77238 north
+;
+#X obj 31 345 loca.line 56 953522 24 74338 56 952503 24 74839 jogio
+;
+#X obj 31 735 loca.horizon w 72065 west;
+#X obj 31 673 loca.horizon n 955574 north;
+#X obj 31 706 loca.horizon s 952640 south;
+#X obj 31 762 loca.horizon e 76539 east;
+#X connect 6 0 44 0;
+#X connect 7 0 44 1;
+#X connect 9 0 42 1;
+#X connect 10 0 45 1;
+#X connect 11 0 41 1;
 #X connect 13 0 0 1;
 #X connect 14 0 0 0;
-#X connect 15 0 42 1;
+#X connect 15 0 48 1;
 #X connect 17 0 18 0;
 #X connect 17 0 19 0;
 #X connect 20 0 36 0;
-#X connect 21 0 46 0;
+#X connect 21 0 44 0;
 #X connect 30 0 32 0;
 #X connect 32 0 31 0;
 #X connect 32 1 33 0;
-#X connect 35 0 45 1;
+#X connect 35 0 43 1;
 #X connect 36 0 17 0;
 #X connect 37 0 23 0;
 #X connect 37 1 24 0;
-#X connect 39 0 47 1;
-#X connect 41 0 37 0;
-#X connect 42 0 41 0;
-#X connect 42 1 12 0;
-#X connect 43 0 49 0;
-#X connect 43 1 5 0;
-#X connect 44 0 47 0;
-#X connect 44 1 3 0;
+#X connect 39 0 49 1;
+#X connect 41 0 46 0;
+#X connect 41 1 5 0;
+#X connect 42 0 49 0;
+#X connect 42 1 3 0;
+#X connect 43 0 41 0;
+#X connect 43 1 34 0;
+#X connect 44 0 42 0;
+#X connect 44 1 2 0;
 #X connect 45 0 43 0;
-#X connect 45 1 34 0;
-#X connect 46 0 44 0;
-#X connect 46 1 2 0;
-#X connect 47 0 48 0;
-#X connect 47 1 38 0;
-#X connect 48 0 45 0;
-#X connect 48 1 4 0;
-#X connect 49 0 42 0;
+#X connect 45 1 4 0;
+#X connect 46 0 48 0;
+#X connect 47 0 51 0;
+#X connect 48 0 47 0;
+#X connect 48 1 12 0;
+#X connect 49 0 45 0;
+#X connect 49 1 38 0;
+#X connect 50 0 53 0;
+#X connect 51 0 52 0;
+#X connect 52 0 50 0;
+#X connect 53 0 37 0;
